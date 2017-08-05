@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h4 class="center-align">Xem chi tiêu</h4>
+            <ul id="tabs-swipe-data" class="tabs">
+                <li class="tab col s3"><a href="#data-swipe-1">Thêm</a></li>
+                <li class="tab col s3"><a href="#data-swipe-2">Xem tất cả</a></li>
+                <li class="tab col s3"><a href="#data-swipe-3">Xem theo thời gian</a></li>
+            </ul>
+            <div id="data-swipe-1" class="col s12">
+                <form action="">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" class="dateInput" id="dateInput" placeholder="Ngày/Tháng/Năm">
+                            <label for="dateInput">Thời gian</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="name" type="text" class="validate">
+                            <label for="name">Tên</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="price" type="number" min="0" class="validate">
+                            <label for="price">Số tiền</label>
+                        </div>
+                    </div>
+                    <div class="row center-align">
+                        <a href="javascript:void(0);" class="btn waves-effect waves-light">Thêm <i class="material-icons right">send</i></a>
+                    </div>
+                </form>
+            </div>
+            <div id="data-swipe-2" class="col s12">
+                <div class="box-data center-align">
+                    <div class="row text_b">
+                        <p class="col s1">Ngày</p>
+                        <p class="col s6">Tên</p>
+                        <p class="col s2">Giá</p>
+                    </div>
+                    <div class="row">
+                        <p class="col s1">12/12/192</p>
+                        <p class="col s6">lum quis fermentum urna. Morbi luctus</p>
+                        <p class="col s2">100000000</p>
+                    </div>
+                </div>
+            </div>
+            <div id="data-swipe-3" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <input type="text" class="dateInput" id="date1" placeholder="Ngày/Tháng/Năm">
+                        <label for="date1">Từ ngày</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        <input type="text" class="dateInput" id="date2" placeholder="Ngày/Tháng/Năm">
+                        <label for="date2">Đến ngày</label>
+                    </div>
+                </div>
+                <div class="row center-align">
+                    <a href="javascript:void(0);" class="btn waves-effect waves-light">Xem <i class="material-icons right">send</i></a>
+                </div>
+                <div class="box-data center-align">
+                    <div class="row text_b">
+                        <p class="col s1">Ngày</p>
+                        <p class="col s6">Tên</p>
+                        <p class="col s2">Giá</p>
+                    </div>
+                    <div class="row">
+                        <p class="col s1">12/12/192</p>
+                        <p class="col s6">lum quis fermentum urna. Morbi luctus</p>
+                        <p class="col s2">100000000</p>
+                    </div>
+                    <div class="row">
+                        <p class="col s1">12/12/192</p>
+                        <p class="col s6">lum quis fermentum urna. Morbi luctus</p>
+                        <p class="col s2">100000000</p>
+                    </div>
+                    <div class="row">
+                        <p class="col s1">12/12/192</p>
+                        <p class="col s6">lum quis fermentum urna. Morbi luctus</p>
+                        <p class="col s2">100000000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/cleave.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function() {
+
+        var cleave = new Cleave('.date2,.dateInput', {
+            date: true,
+            datePattern: ['d', 'm', 'Y']
+        });
+    });
+    </script>
+</body>
+
+</html>
